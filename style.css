@@ -1,0 +1,75 @@
+/* General body style */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* Gallery container style */
+#gallery-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Image display area style */
+#image {
+  width: 60%;
+  height: 300px;
+  background-color: #d8d8d8;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 300px;
+  color: white;
+  border-radius: 8px;
+  transition: background-image 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Gallery grid style */
+#gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Thumbnail style */
+.thumbnail {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #ccc;
+}
+
+/* Thumbnail hover effect */
+.thumbnail:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Styling for the hovered image */
+.thumbnail:active {
+  transform: scale(1);
+}
+
+/* Optional: On smaller screens, reduce the size of thumbnails */
+@media (max-width: 768px) {
+  .thumbnail {
+      width: 120px;
+      height: 80px;
+  }
+  #image {
+      width: 80%;
+  }
+}
